@@ -27,7 +27,7 @@ export default Navbar;
 
 const NavbarWrapper = styled.div`
   background: #fafafa;
-  padding: 0.75rem 0 1.5rem;
+  padding: 0.75rem 0;
   position: fixed;
   left: 0;
   right: 0;
