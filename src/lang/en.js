@@ -20,6 +20,17 @@
         accountLocale : 'Current locale',
         accountLogout: 'Logout'
     },
+    basket:{
+        addBasket: "ADD TO BASKET",
+        removeBasket : "REMOVE FROM BASKET",
+        totalOfProducts : "Total of Products",
+        total : "Total",
+        taxCargo : "Tax + Cargo",
+        generalTotal : "General Total",
+        addBasketMessage : "Added to basket",
+        deleteBasketMessage : "Added to basket",
+        emptyBasket:"Basket is empty !",
+    },
     messages: {
         signupSuccess: 'Successfully registered.',
         signupError : 'User already exist.',

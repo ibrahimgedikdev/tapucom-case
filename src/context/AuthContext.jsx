@@ -27,6 +27,7 @@ const AuthProvider = ({ children }) => {
     setLoggedIn(false);
     setUser(null);
     localStorage.removeItem("loginData");
+    localStorage.removeItem("basket");
   };
 
 

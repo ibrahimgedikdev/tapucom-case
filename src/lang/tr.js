@@ -20,6 +20,16 @@ const tr = {
         accountLocale : 'Dil',
         accountLogout: 'Çıkış Yap'
     },
+    basket:{
+        addBasket: "SEPETE EKLE",
+        removeBasket : "SEPETTEN SİL",
+        totalOfProducts : "Ürünlerin Toplamı",
+        total : "Toplam",
+        taxCargo : "Vergiler + Kargo",
+        generalTotal : "Genel Toplam",
+        emptyBasket:"Sepetiniz boş !",
+
+    },
     messages: {
         signupSuccess: 'Kayıt başarılı.',
         signupError : 'Bu kullanıcı zaten kayıtlı !',

@@ -10,8 +10,8 @@ import { useAuth } from "../../context/AuthContext";
 import { fetchRegister, isExistUser } from "../../api/api";
 import { toastSuccess, toastError } from "../../constant/toastify";
 import { useTranslation } from "react-i18next";
-import i18n from "../../lang/i18n";
 import LanguageContext from "../../context/LanguageContext";
+import { css } from "styled-components";
 
 function SignupForm() {
   const { t, i18n } = useTranslation();
@@ -28,7 +28,7 @@ function SignupForm() {
   const { register } = useAuth();
   const validation = Yup.object({
     email: Yup.string().email(t("signup.emailError")).required(t("signup.emailRequired")),
-    password: Yup.string().required(t("signup.passwordRequired")).min(8).max(20),
+    password: Yup.string().required(t("signup.passwordRequired")).min(8, t('signup.passwordError')).max(20),
   });
 
   return (
@@ -75,7 +75,7 @@ function SignupForm() {
                 onBlur={handleBlur}
                 value={values.email}
               />
-              <Label htmlFor="email">{t("signup.emailPlaceholder")}</Label>
+              <Label htmlFor="email" errors={errors.email}>{t("signup.emailPlaceholder")}</Label>
               {errors.email && touched.email && <Error>{errors.email}</Error>}
             </FormGroup>
             <FormGroup>
@@ -87,7 +87,7 @@ function SignupForm() {
                 onBlur={handleBlur}
                 value={values.password}
               />
-              <Label htmlFor="password">
+              <Label htmlFor="password" errors={errors.password}>
                 {t("signup.passwordPlaceholder")}
               </Label>
               {errors.password && touched.password && (
@@ -133,6 +133,10 @@ const Label = styled.label`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transition:all 0.3s ease-in-out;
+  ${(props) => props.errors && css`
+      top:25%;
+    `};
 `;
 const StyledInput = styled(Input)`
   padding: 0;
@@ -179,13 +183,13 @@ const StyledButton = styled(Button)`
   margin-top: 2rem;
 `;
 const Error = styled.div`
-  position: absolute;
-  bottom: -2rem;
-  left: 0;
+  /* position: absolute; */
+  /* bottom: -2rem;
+  left: 0; */
   background: #e82223;
   color: #fff;
   font-size: 0.8rem;
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
-  margin-top: 0.25rem;
+  margin-top: 0.4rem;
 `;
