@@ -8,7 +8,7 @@ import LocationIcon from "./icons/Location";
 import { t } from "i18next";
 
 function ProductItem({ product }) {
-  const { items, addToBasket, removeFromBasket } = useBasket();
+  const { items, addToBasket } = useBasket();
 
   const findBasketItem = items.find(
     (basket_item) => basket_item.id === product.id

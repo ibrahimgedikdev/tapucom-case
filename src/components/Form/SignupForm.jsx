@@ -1,5 +1,4 @@
-// import { t } from "i18next";
-import React, { useState, useContext } from "react";
+import React, {  useContext } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { Field, Formik } from "formik";
@@ -100,7 +99,7 @@ function SignupForm() {
                 as="select"
                 name="locale"
                 multiple={false}
-                defaultValue={locale == "tr" ? "tr" : "en"}
+                defaultValue={locale === "tr" ? "tr" : "en"}
                 onChange={(e) => changeLocale(e.target.value)}
               >
                 <Option value="tr" >{t("locale.tr")}</Option>

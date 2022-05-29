@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect, useContext } from "react";
-import { fetchRegister } from "../api/api";
 
 const AuthContext = createContext();
 

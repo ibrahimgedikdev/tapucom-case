@@ -37,7 +37,7 @@ function Account() {
         <SelectLabel htmlFor="locale">Locale</SelectLabel>
         <LocaleSelect
           name="locale"
-          defaultValue={locale == "tr" ? "tr" : "en"}
+          defaultValue={locale === "tr" ? "tr" : "en"}
           onChange={(e) => changeLocale(e.target.value)}
         >
           <Option value="tr">{t("locale.tr")}</Option>

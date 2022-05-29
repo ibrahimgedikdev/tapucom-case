@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { useBasket } from "../context/BasketContext";
 function Basket() {
-  const { items, removeFromBasket } = useBasket();
+  const { items } = useBasket();
   const total = items.reduce((acc, obj) => Number(acc) + Number(obj.price), 0);
 
   return (
