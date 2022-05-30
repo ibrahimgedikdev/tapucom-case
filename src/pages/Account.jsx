@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Container } from "../components/Container";
 import { useAuth } from "../context/AuthContext";
 import { Button } from "../components/Button";
-import Arrow from "../components/icons/Arrow";
 import { useTranslation } from "react-i18next";
 import LanguageContext from "../context/LanguageContext";
 
