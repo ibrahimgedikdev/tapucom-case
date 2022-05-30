@@ -1,6 +1,7 @@
 ## Tapu.com Case
 Kayıt olma, ürün listeleme, sepet işlemlerinin bulunduğu React projesi
 
+### İstenilenler
 <ol>
   <li>Ekranda gördüğünüz tasarımları uzmanlık alanınıza göre react, vue veya pure javascript kullanarak kodlamanız beklenmektedir.</li>
   <li>Axios veya fetch api kullanılarak sunucu alışverişlerinin yapılması</li>
